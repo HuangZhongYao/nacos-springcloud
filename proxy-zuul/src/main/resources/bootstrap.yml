@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: zuul-1
+  cloud:
+    nacos:
+      config:
+        server-addr: 60.205.218.96:8848,60.205.218.96:8849,60.205.218.96:8850
+        file-extension: yml
+        encode: UTF-8
+        group: proxy
+      discovery:
+        server-addr: 60.205.218.96:8848,60.205.218.96:8849,60.205.218.96:8850
+#        zuul 网关
+zuul:
+  routes:
+    pro.serviceId: produce-3
+    pro.path: /pro/**
+#    忽略原真实服务名
+  ignored-services: "*"
+#  统一公用后缀
+  prefix: /aok

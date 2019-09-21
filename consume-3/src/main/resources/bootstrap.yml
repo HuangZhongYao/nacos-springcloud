@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: consume-3
+  cloud:
+    nacos:
+      config:
+        server-addr: 60.205.218.96:8848,60.205.218.96:8849,60.205.218.96:8850
+        file-extension: yml
+        encode: UTF-8
+        group: consume
+      discovery:
+        server-addr: 60.205.218.96:8848,60.205.218.96:8849,60.205.218.96:8850

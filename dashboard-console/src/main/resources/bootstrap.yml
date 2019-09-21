@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: dashboard
+  cloud:
+    nacos:
+      config:
+        server-addr: 60.205.218.96:8848,60.205.218.96:8849,60.205.218.96:8850
+        file-extension: yml
+        encode: UTF-8
+        group: console
+      discovery:
+        server-addr: 60.205.218.96:8848,60.205.218.96:8849,60.205.218.96:8850
